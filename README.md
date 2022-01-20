@@ -1,13 +1,10 @@
-Spring Boot + Kotlin Hello, World
+PeopleInSpace GraphQL Server
 ---------------------------------
 
 ## Run Locally:
 1. Start the local server: `./gradlew bootRun`
 1. (Optional) To enable auto-reload, in another terminal / shell: `./gradlew -t classes`
 1. Open: [localhost:8080/playground](http://localhost:8080/playground)
-
-## Deploy on Cloud Run (with a couple clicks):
-[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
 ## Run on Google Cloud Run (with the command line):
 
