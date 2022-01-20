@@ -17,7 +17,7 @@ class IssPositionSubscription : Subscription {
 
 
     fun issPosition(): Publisher<IssPosition> {
-        return flow<IssPosition> {
+        return flow {
             while (true) {
                 val position = peopleInSpaceApi.fetchISSPosition().iss_position
                 logger.info("ISS position = $position")
