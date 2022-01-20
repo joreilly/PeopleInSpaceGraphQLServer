@@ -1,5 +1,6 @@
-PeopleInSpace GraphQL Server
----------------------------------
+# PeopleInSpace GraphQL Server
+
+GraphQL backend allowing querying list of people in space and subscribing to position of International Space Station.
 
 ## Run Locally:
 1. Start the local server: `./gradlew bootRun`
