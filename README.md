@@ -4,7 +4,6 @@ GraphQL backend allowing querying list of people in space and subscribing to pos
 
 ## Run Locally:
 1. Start the local server: `./gradlew bootRun`
-1. (Optional) To enable auto-reload, in another terminal / shell: `./gradlew -t classes`
 1. Open: [localhost:8080/playground](http://localhost:8080/playground)
 
 ## Run on Google Cloud Run (with the command line):
