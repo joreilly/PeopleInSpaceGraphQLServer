@@ -1,4 +1,4 @@
-Spring Boot + Kotlin Hello, World
+PeopleInSpace GraphQL Server
 ---------------------------------
 
 ## Run Locally:
