@@ -19,9 +19,9 @@ data class IssResponse(val message: String, val iss_position: IssPosition, val t
 
 
 class PeopleInSpaceApi(
-    var baseUrl: String = "https://people-in-space-proxy.ew.r.appspot.com",
+    private var baseUrl: String = "https://people-in-space-proxy.ew.r.appspot.com",
 ) {
-    val client = createHttpClient()
+    private val client = createHttpClient()
 
     suspend fun fetchPeople() = client.get("$baseUrl/astros.json").body<AstroResult>()
     suspend fun fetchISSPosition() = client.get("$baseUrl/iss-now.json").body<IssResponse>()
