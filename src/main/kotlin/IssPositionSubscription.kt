@@ -10,18 +10,20 @@ import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 
 
+data class Position(val latitude: Double, val longitude: Double)
+
 @Component
 class IssPositionSubscription : Subscription {
     private val logger: Logger = LoggerFactory.getLogger(IssPositionSubscription::class.java)
     private var peopleInSpaceApi = PeopleInSpaceApi()
 
 
-    fun issPosition(): Publisher<IssPosition> {
+    fun issPosition(): Publisher<Position> {
         return flow {
             while (true) {
                 val position = peopleInSpaceApi.fetchISSPosition().iss_position
                 logger.info("ISS position = $position")
-                emit(position)
+                emit(Position(position.latitude, position.longitude))
                 delay(POLL_INTERVAL)
             }
         }.asPublisher()
