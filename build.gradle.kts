@@ -65,3 +65,7 @@ tasks.withType<KotlinCompile> {
 		jvmTarget = JavaVersion.VERSION_1_8.toString()
 	}
 }
+
+tasks.getByName<org.springframework.boot.gradle.tasks.bundling.BootBuildImage>("bootBuildImage") {
+	environment = mapOf("BP_JVM_VERSION" to "11.*")
+}
